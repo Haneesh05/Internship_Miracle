@@ -1,0 +1,14 @@
+Program to delete given character from given string.
+Program to print number of words and characters in a given string.
+Program to reverse the string without using predefined function for reverse.
+Program to convert first letter of each word into uppercase in a given string.
+Program to implement user-defined function to compare two strings.
+Program to find length of the string without using predefined function for finding length.
+Program to count the number of vowels and consonants in a given string.
+Program to print the occurrences of each character in a given string.
+Program to replace each word’s first letter with its previous character in a given sentence?
+Program to print common Characters in Two String?
+Program to delete common Characters in Two String?
+Program to print the number of vowels,consonants,digits,words and special characters in a given string?
+Write a program to print string in reverse order word by word?
+Check the String is palindrome or not?

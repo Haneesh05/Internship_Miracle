@@ -1,0 +1,20 @@
+01.  Write a statement to declare two integers called i and j.
+02.  Write a statement which assigns the value 67 to the integer variable ""I"".
+03.  Write a statement, using the cast operator, to print out the integer part of the number 23.1256.
+04.  Write a program to do the following
+      a. Declare a variable j of the type integer.
+      b. Assign a value to the variable j of type int
+      c. Display the content of variable j.
+      d. Display the square of the content of variable j.
+      e. Display the cube of the content of variable j.
+05.  Write a program to perform all arithmetic operations?
+06.  Write a program to find sum and average of three numbers?
+07.  Write a program to find the area of the circle?  Write a program to find the Cube of the given number?
+08.  Say which of the following are valid java identifiers:
+      a. Ralph23 b. 80shillings c. mission_control d. A$ e. _off
+09.  What is the difference between the types float and double.  What is the difference between the types int and unsigned int?
+10.  Write a program that prints the string “ Miracle World"".
+11.  Write a program to find the interest on a bank account for a given rate?
+12.  Create a class named 'Student' with String variable 'name' and integer variable 'roll_no'. Assign the value of roll_no as '2' and that of name as ""John"" by creating an object of the class Student.?
+13.  Write a program to print the area of a rectangle by creating a class named 'Area' taking the values of its length and breadthand having a method named 'returnArea' which returns the area of the 14.  rectangle. Length and breadth of rectangle are entered through keyboard.
+14.  Print the average of three numbers entered by user by creating a class named 'Average' having a method to calculate and print the average.
