@@ -20,15 +20,16 @@ public class DqlTask1{
 		System.out.println("Enter the username");
 		String username = sc.nextLine();
 		sc.close();
-		String str = "Select * from employee where e_fname like'"+ fname +"%' and e_lname like '"+lname+"%' and e_username like'"+username+"%'";
+		String str = "Select * from employee where e_fname ='"+ fname +"' and e_lname = '"+lname+"' and e_username ='"+username+"'";
 		
 		//load the driver
 		Class.forName("com.mysql.cj.jdbc.Driver"); 
 		Connection c = DriverManager.getConnection("jdbc:mysql://localhost:3306/internship","root","password");
 		PreparedStatement ps = c.prepareStatement(str);
+		System.out.println(str);
 		ResultSet rs = ps.executeQuery();  
 		ResultSetMetaData rm = rs.getMetaData();
-		if(rm.getColumnCount() >0)
+		
 		{
 			for(int i = 1 ; i < rm.getColumnCount()+1;i++)
 				{
@@ -44,10 +45,7 @@ public class DqlTask1{
 				System.out.println();
 			}
 		}
-		else
-		{
-			System.out.println("malli chusuko");
-		}
+		
 		}
 	}
 	
