@@ -3,6 +3,13 @@ package bank;
 import java.sql.*;
 import java.util.Scanner;
 
+/* SQL INPUTS
+-- insert into indianbank values (9876543210,50000,"abcdef@gmail.com",'9876543210');
+-- insert into indianbank values (1234567890,15000,"defabc@gmail.com",'1234567890');
+-- select * from indianbank;
+-- update indianbank  acc_bal= 50000 where acc_no = 1234567890;
+-- select * from employee;
+-- select * from indianbank ; */
 
 
 class InSufficientBalanceException extends Exception
