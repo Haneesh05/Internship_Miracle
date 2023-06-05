@@ -1,0 +1,18 @@
+<html>
+<head>
+</head>
+<body>
+
+<label for="fnum">First num</label>
+<input type="text" name="fnum" id="fnum">
+
+<button type="submit" onclick="cal()">Submit</button>
+<script>
+function cal(){
+	var fnum = parseInt(document.getElementById("fnum").value);
+	fnum = fnum* 0.621371;
+	window.alert(fnum);}
+
+</script>
+</body>
+</html>

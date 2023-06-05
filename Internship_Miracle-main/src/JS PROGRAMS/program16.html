@@ -1,0 +1,33 @@
+<html>
+<head>
+  <title>Math Tables</title>
+</head>
+<body>
+  <h2>Math Tables</h2>
+  <label for="num">Enter the number</label>
+  <input type="number" name="num" id="num">
+  <button type="submit" onclick="fib()">SUBMIT</button>
+  <div id="output"></div>
+
+  <script>
+    function fib() {
+      var f1 = 0;
+      var f2 = 1;
+      var num = parseInt(document.getElementById("num").value);
+      var print = "";
+
+      var f3=1; // Declare f3 outside the while loop
+
+      while (f3 <= num) {
+        f3 = f1 + f2;
+        f1 = f2;
+        f2 = f3;
+        print += f3 + ", ";
+      }
+
+      document.getElementById("output").innerHTML = "0, 1, " + print;
+    }
+  </script>
+</body>
+</html>
+

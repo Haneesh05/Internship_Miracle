@@ -1,0 +1,29 @@
+<html>
+<head>
+</head>
+<body>
+
+<label for="num">Enter the Number:</label>
+<input type="num" name="num" id="num">
+<button type="submit" onclick="cal()">Check</button>
+<script>
+function cal(){
+
+	var num = document.getElementById("num").value;
+	if(num == 0)
+	{
+	window.alert("The given number is ZERO");
+	}
+	else if(num>0)
+	{
+	window.alert("The given number is POSITIVE");
+	}
+	else if(num<0)
+	{
+	window.alert("The given number is NEGATIVE");
+	}
+
+}
+</script>
+</body>
+</html>

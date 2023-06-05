@@ -1,0 +1,18 @@
+<html>
+<head>
+</head>
+<body>
+
+<label for="temp">Temp</label>
+<input type="text" name="temp" id="temp">
+
+<button type="submit" onclick="cal()">Submit</button>
+<script>
+function cal(){
+	var temp = parseInt(document.getElementById("temp").value);
+	var cel = ((temp * 9/5) + 32);
+	window.alert("The temprature in fahrenheit is "+cel);}
+
+</script>
+</body>
+</html>

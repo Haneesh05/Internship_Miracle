@@ -1,0 +1,22 @@
+<html>
+<head>
+</head>
+<body>
+
+<label for="height">Height</label>
+<input type="text" name="height" id="height">
+<label for="base">Base</label>
+<input type="text" name="base" id="base">
+
+
+<button type="submit" onclick="cal()">Submit</button>
+<script>
+function cal(){
+	var height = parseInt(document.getElementById("height").value);
+	var base = parseInt(document.getElementById("base").value);
+	var area = 1/2*base*height;
+	document.write(area);}
+
+</script>
+</body>
+</html>

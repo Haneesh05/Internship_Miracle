@@ -1,0 +1,23 @@
+<html>
+<head>
+</head>
+<body>
+
+<label for="num">Enter the Number:</label>
+<input type="num" name="num" id="num">
+<button type="submit" onclick="cal()">Check</button>
+<script>
+function cal(){
+
+	var num = document.getElementById("num").value;
+	var val = 1;
+	for(var i = num;i>1;i--)
+		{
+			val = val * i;
+		}	 
+	window.alert(val);
+
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<html>
+<head>
+</head>
+<body>
+  <label for="num1">Enter the First Interval:</label>
+  <input type="number" name="num1" id="num1">
+  <label for="num2">Enter the Second Interval:</label>
+  <input type="number" name="num2" id="num2">
+  <button type="submit" onclick="cal()">Check</button>
+  <div id="result"></div>
+  <script>
+    function cal() {
+      var num1 = parseInt(document.getElementById("num1").value);
+      var num2 = parseInt(document.getElementById("num2").value);
+      var primes = [];
+
+      for (var j = num1; j < num2; j++) {
+        var count = 0;
+        for (var i = 2; i < j; i++) {
+          if (j % i === 0) {
+            count++;
+          }
+        }
+        if (count === 0) {
+          primes.push(j);
+        }
+      }
+
+      var resultDiv = document.getElementById("result");
+      resultDiv.innerHTML = ""; // Clear previous content
+      primes.forEach(function (prime) {
+        var para = document.createElement("p");
+        para.textContent = prime;
+        resultDiv.appendChild(para);
+      });
+    }
+  </script>
+</body>
+</html>
+

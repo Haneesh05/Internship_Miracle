@@ -1,0 +1,20 @@
+<html>
+<head>
+</head>
+<body>
+
+<label for="fnum">First num</label>
+<input type="text" name="fnum" id="fnum">
+<label for="fnum">Second num</label>
+<input type="text" name="snum"id="snum">
+
+<button type="submit" onclick="cal()">Submit</button>
+<script>
+function cal(){
+	var fnum = parseInt(document.getElementById("fnum").value);
+	var snum = parseInt(document.getElementById("snum").value);
+	window.alert(fnum+snum);}
+
+</script>
+</body>
+</html>

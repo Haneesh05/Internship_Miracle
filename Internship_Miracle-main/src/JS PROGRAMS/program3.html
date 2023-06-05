@@ -1,0 +1,18 @@
+<html>
+<head>
+</head>
+<body>
+
+<label for="fnum">First num</label>
+<input type="text" name="fnum" id="fnum">
+
+<button type="submit" onclick="cal()">Submit</button>
+<script>
+function cal(){
+	var fnum = parseInt(document.getElementById("fnum").value);
+	var sqroot = Math.pow(fnum,0.5);
+	document.write(sqroot);}
+
+</script>
+</body>
+</html>

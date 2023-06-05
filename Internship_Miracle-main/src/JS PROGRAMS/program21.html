@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ASCII</title>
+</head>
+<body>
+  <h2>ASCII</h2>
+  <label for="num">Enter Character:</label>
+  <input type="text" name="num" id="num">
+  <button type="submit" onclick="palindrome()">FIND</button>
+  <div id="output"></div>
+
+  <script>
+  function palindrome(){
+    var num = document.getElementById("num").value;
+    var num1 ="";
+    for(var i = num.toString().length ; i >= 0 ; i--)
+    {
+    	num1 = num1+ num.charAt(i);    	
+    }
+    if(num ==num1)
+    {
+	document.getElementById("output").innerHTML = "The given string is a palidrome";
+    }
+    else
+    {
+    	document.getElementById("output").innerHTML = "The given string is a not palidrome";
+    }
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<html>
+<head>
+</head>
+<body>
+
+<label for="num1">Enter the First Number:</label>
+<input type="num" name="num1" id="num1">
+<label for="num2">Enter the Second Number:</label>
+<input type="num" name="num2" id="num2">
+<label for="num3">Enter the Third Number:</label>
+<input type="num" name="num3" id="num3">
+<button type="submit" onclick="cal()">Check</button>
+<script>
+function cal(){
+
+	var num1 = document.getElementById("num1").value;
+	var num2 = document.getElementById("num2").value;
+	var num3 = document.getElementById("num3").value;
+	
+	if(num1>num2)
+	{
+		if(num1>num3)
+		{
+		window.alert("Largest Number is "+num1);
+		}
+		else
+		{
+		window.alert("Largest Number is "+num3);
+		}
+	}
+	else if(num2>num3)
+	{
+	window.alert("Largest Number is "+num2);
+	}
+	else
+	{
+	window.alert("Largest Number is a"+num3);
+	}
+	
+
+}
+</script>
+</body>
+</html>
