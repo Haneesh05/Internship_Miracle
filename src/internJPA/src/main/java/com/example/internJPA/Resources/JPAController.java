@@ -40,15 +40,15 @@ public class JPAController {
         return jc.getNameById(id);
     }
 
-//Get Username of an ID from DB using JPA
-    @GetMapping("/retrieveByName/{id}")
-    public String putPhoneNumberById(@PathVariable("id") long id) {
-        return jc.getPhoneNumberById(id);
+//Get data of an ID from DB using JPA
+    @GetMapping("/retrieveById/{id}")
+    public Optional<Employee> putDataById(@PathVariable("id") long id) {
+        return jc.getDataById(id);
     }
 
 //Get Username of an ID from DB using JPA
-    @GetMapping("/retrieveByName/{id}")
-    public String putEmailIdById(@PathVariable("id") long id) {
-        return jc.getEmailIdById(id);
+    @GetMapping("/retrieveName/{id}")
+    public String putNameById(@PathVariable("id") long id) {
+        return jc.getNameById(id);
     }
 }
