@@ -33,7 +33,7 @@ public class JPAService {
 
 //this method brings the Phone number from DB of a particular ID
     public String getPhoneNumberById(long id) {
-        return js.getUsername(id);
+        return js.getPhonenumber(id);
     }
 
 //this method brings the email id from DB of a particular ID	
