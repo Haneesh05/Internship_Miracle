@@ -2,7 +2,6 @@ package com.example.internjpa.jpa;
 
 import java.util.List;
 import java.util.Optional;
-import com.example.internjpa.jpa.JPARepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
