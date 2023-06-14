@@ -37,21 +37,18 @@ public class JPAController {
 //Get Username of a ID from DB using JPA
     @GetMapping("/retrieveByName/{id}")
     public String putNameById(@PathVariable("id") long id) {
-        System.out.println("This at controller"+jc.getNameById(id));
         return jc.getNameById(id);
     }
 
 //Get Username of a ID from DB using JPA
     @GetMapping("/retrieveByName/{id}")
     public String putPhoneNumberById(@PathVariable("id") long id) {
-        System.out.println("This at controller"+jc.getPhoneNumberById(id));
         return jc.getPhoneNumberById(id);
     }
 
 //Get Username of a ID from DB using JPA
     @GetMapping("/retrieveByName/{id}")
     public String putEmailIdById(@PathVariable("id") long id) {
-        System.out.println("This at controller"+jc.getEmailIdById(id));
         return jc.getEmailIdById(id);
     }
 }
