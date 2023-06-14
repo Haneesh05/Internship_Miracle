@@ -1,18 +1,22 @@
-package com.example.internJPA.Resources;
+package com.example.internjpa.jpa;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 
 public interface JPARepo extends JpaRepository<Employee, Long> {
 
-	
-	@Query("select e.username from Employee e  where e.id = ?1")
-	String getByUsername(long id);
-	
-	@Query("select e.phonenumber from Employee e  where e.id = ?1")
-	String getByPhonenumber(long id);
-	
-	@Query("select e.emailId from Employee e  where e.id = ?1")
-	String getByemailId(long id);
-	
+
+    @Query("select e.username from Employee e  where e.id = ?1")
+    String getUsername(long id);
+
+    @Query("select e.phonenumber from Employee e  where e.id = ?1")
+    String getPhonenumber(long id);
+
+    @Query("select e.emailId from Employee e  where e.id = ?1")
+    String getEmailId(long id);
+
+    boolean existsByUsername(String username);
+    boolean existsByPhonenumber(String phoneNumber);
+    boolean existsByEmailId(String emailid);
+
 }
