@@ -1,31 +1,44 @@
-package com.example.internJPA.Resources;
+package com.example.internjpa.jpa;
 
 import java.util.List;
 import java.util.Optional;
+import com.example.internjpa.jpa.JPARepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+//annotation for service class
 @Service
 public class JPAService {
 
-	@Autowired
-	JPARepo jr;
+    @Autowired
+    JPARepo js;
 
-	public Employee insertData(Employee e) {
+//this method inserts data into DB 
+    public Employee insertData(Employee e) {
+        return js.save(e);
+    }
 
-		return jr.save(e);
-	}
+//this method brings all the data from DB of emp table
+    public List<Employee> getData() {
+        return js.findAll();
+    }
+//this method brings the data of employee from DB from a particular ID
+    public Optional<Employee> getDataById(long id) {
+        return js.findById(id);
+    }
 
-	public List<Employee> getData() {
-		return jr.findAll();
-	}
+//this method brings the Username from DB of a particular ID	
+    public String getNameById(long id) {
+        return js.getUsername(id);
+    }
 
-	public Optional<Employee> getDataById(long id) {
-		return jr.findById(id);
-	}
+//this method brings the Phone number from DB of a particular ID
+    public String getPhoneNumberById(long id) {
+        return js.getUsername(id);
+    }
 
-	public String getDataByName(long id) {
-		return jr.getByUsername(id);
-	}
-
+//this method brings the email id from DB of a particular ID	
+    public String getEmailIdById(long id) {  
+        return js.getEmailId(id);
+    }
 }
