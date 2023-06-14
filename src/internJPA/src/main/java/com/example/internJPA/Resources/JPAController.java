@@ -1,4 +1,4 @@
-package com.example.internJPA.Resources;
+package com.example.internjpa.jpa;
 
 import java.util.List;
 import java.util.Optional;
@@ -13,32 +13,45 @@ import org.springframework.web.bind.annotation.RestController;
 
 public class JPAController {
 
-	@Autowired
-	private JPAService js;
+    @Autowired
+    private JPAService jc;
 
-//insert data into DB using JPA 
+//insert data into DB using JPA
+    @PostMapping("/insert")
+    public Employee insert(@RequestBody Employee e) {
+        return jc.insertData(e);
+    }
 
-	@PostMapping("/insert")
-	public Employee insert(@RequestBody Employee e) {
-		return js.insertData(e);
-	}
+//Get all data from the DB using JPA
+    @GetMapping("/retrieve")
+    public List<Employee> putData() {
+        return jc.getData();
+    }
 
-	@GetMapping("/retrieve")
-	public List<Employee> getData() {
-		return js.getData();
-	}
+//Get data of an ID from DB using JPA
+    @GetMapping("/retrieveById/{id}")
+    public Optional<Employee> putDataById(@PathVariable("id") long id) {
+        return jc.getDataById(id);
+    }
 
-	// get data of an ID from DB using JPA
-	@GetMapping("/retrieveById/{id}")
-	public Optional<Employee> getDataById(@PathVariable("id") long id) {
-		return js.getDataById(id);
+//Get Username of a ID from DB using JPA
+    @GetMapping("/retrieveByName/{id}")
+    public String putNameById(@PathVariable("id") long id) {
+        System.out.println("This at controller"+jc.getNameById(id));
+        return jc.getNameById(id);
+    }
 
-	}
+//Get Username of a ID from DB using JPA
+    @GetMapping("/retrieveByName/{id}")
+    public String putPhoneNumberById(@PathVariable("id") long id) {
+        System.out.println("This at controller"+jc.getPhoneNumberById(id));
+        return jc.getPhoneNumberById(id);
+    }
 
-	@GetMapping("/retrieveByName/{id}")
-	public String getDataByName(@PathVariable("id") long id) {
-		return js.getDataByName(id);
-
-	}
-
+//Get Username of a ID from DB using JPA
+    @GetMapping("/retrieveByName/{id}")
+    public String putEmailIdById(@PathVariable("id") long id) {
+        System.out.println("This at controller"+jc.getEmailIdById(id));
+        return jc.getEmailIdById(id);
+    }
 }
