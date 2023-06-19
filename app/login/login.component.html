@@ -1,0 +1,10 @@
+<h1>Template Driven Forms:</h1>
+<form>
+  Username:
+  <input type="text" [(ngModel)]="username" name="username" >  <br><br>
+  Password:
+  <input type="password" [(ngModel)]="password" name="password"> <br><br>
+  Email:
+  <input type="email" [(ngModel)]="emailId" name="emailId"><br><br>
+  <button type="submit" on-click="submitForm()">Submit</button> 
+</form>
